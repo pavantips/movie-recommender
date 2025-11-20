@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 
 # Load data
-df = pd.read_csv('movies_clean.csv', sep='|')
+df = pd.read_parquet('movies_clean.parquet')
 cosine_sim = joblib.load('cosine_similarity.pkl')
 
 st.title("🎬 Movie Recommender System")
